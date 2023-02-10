@@ -13,10 +13,18 @@
 		1B1C15BA298E985F00FE6DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C15B8298E985F00FE6DB9 /* Main.storyboard */; };
 		1B1C15BC298E986000FE6DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C15BB298E986000FE6DB9 /* Assets.xcassets */; };
 		1B1C15BF298E986000FE6DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C15BD298E986000FE6DB9 /* LaunchScreen.storyboard */; };
+		1B1C15C7298E9CD600FE6DB9 /* DataHuman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C15C6298E9CD600FE6DB9 /* DataHuman.swift */; };
+		1B1C15C9298E9D9200FE6DB9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C15C8298E9D9200FE6DB9 /* DetailViewController.swift */; };
+		1B1C15CD298E9E0400FE6DB9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C15CC298E9E0400FE6DB9 /* DataManager.swift */; };
+		1B1C15CF298E9E3D00FE6DB9 /* NewContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C15CE298E9E3D00FE6DB9 /* NewContactController.swift */; };
+		1B1C15D1298E9E6700FE6DB9 /* OneTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C15D0298E9E6700FE6DB9 /* OneTableCell.swift */; };
+		1B1C15D3298E9E8600FE6DB9 /* HumanModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C15D2298E9E8600FE6DB9 /* HumanModelRealm.swift */; };
+		1B1C15D8298EA1E700FE6DB9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1C15D7298EA1E700FE6DB9 /* Realm */; };
+		1B1C15DA298EA1E700FE6DB9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1C15D9298EA1E700FE6DB9 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B1C15AF298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Birthdays ВОСТАНОВЛЕНИЕ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1C15AF298E985F00FE6DB9 /* Happy Birthdays V.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Birthdays V.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1C15B2298E985F00FE6DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B1C15B4298E985F00FE6DB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1B1C15B6298E985F00FE6DB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		1B1C15BB298E986000FE6DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B1C15BE298E986000FE6DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B1C15C0298E986000FE6DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B1C15C6298E9CD600FE6DB9 /* DataHuman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHuman.swift; sourceTree = "<group>"; };
+		1B1C15C8298E9D9200FE6DB9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1B1C15CC298E9E0400FE6DB9 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1B1C15CE298E9E3D00FE6DB9 /* NewContactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactController.swift; sourceTree = "<group>"; };
+		1B1C15D0298E9E6700FE6DB9 /* OneTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneTableCell.swift; sourceTree = "<group>"; };
+		1B1C15D2298E9E8600FE6DB9 /* HumanModelRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanModelRealm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1C15DA298EA1E700FE6DB9 /* RealmSwift in Frameworks */,
+				1B1C15D8298EA1E700FE6DB9 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,39 +56,46 @@
 		1B1C15A6298E985F00FE6DB9 = {
 			isa = PBXGroup;
 			children = (
-				1B1C15B1298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ */,
+				1B1C15B1298E985F00FE6DB9 /* Happy Birthdays V */,
 				1B1C15B0298E985F00FE6DB9 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		1B1C15B0298E985F00FE6DB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B1C15AF298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ.app */,
+				1B1C15AF298E985F00FE6DB9 /* Happy Birthdays V.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1B1C15B1298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ */ = {
+		1B1C15B1298E985F00FE6DB9 /* Happy Birthdays V */ = {
 			isa = PBXGroup;
 			children = (
 				1B1C15B2298E985F00FE6DB9 /* AppDelegate.swift */,
 				1B1C15B4298E985F00FE6DB9 /* SceneDelegate.swift */,
 				1B1C15B6298E985F00FE6DB9 /* ViewController.swift */,
+				1B1C15C8298E9D9200FE6DB9 /* DetailViewController.swift */,
+				1B1C15CE298E9E3D00FE6DB9 /* NewContactController.swift */,
+				1B1C15D0298E9E6700FE6DB9 /* OneTableCell.swift */,
+				1B1C15CC298E9E0400FE6DB9 /* DataManager.swift */,
+				1B1C15D2298E9E8600FE6DB9 /* HumanModelRealm.swift */,
 				1B1C15B8298E985F00FE6DB9 /* Main.storyboard */,
 				1B1C15BB298E986000FE6DB9 /* Assets.xcassets */,
 				1B1C15BD298E986000FE6DB9 /* LaunchScreen.storyboard */,
 				1B1C15C0298E986000FE6DB9 /* Info.plist */,
+				1B1C15C6298E9CD600FE6DB9 /* DataHuman.swift */,
 			);
-			path = "Happy Birthdays ВОСТАНОВЛЕНИЕ";
+			path = "Happy Birthdays V";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B1C15AE298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ */ = {
+		1B1C15AE298E985F00FE6DB9 /* Happy Birthdays V */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B1C15C3298E986000FE6DB9 /* Build configuration list for PBXNativeTarget "Happy Birthdays ВОСТАНОВЛЕНИЕ" */;
+			buildConfigurationList = 1B1C15C3298E986000FE6DB9 /* Build configuration list for PBXNativeTarget "Happy Birthdays V" */;
 			buildPhases = (
 				1B1C15AB298E985F00FE6DB9 /* Sources */,
 				1B1C15AC298E985F00FE6DB9 /* Frameworks */,
@@ -82,9 +105,13 @@
 			);
 			dependencies = (
 			);
-			name = "Happy Birthdays ВОСТАНОВЛЕНИЕ";
+			name = "Happy Birthdays V";
+			packageProductDependencies = (
+				1B1C15D7298EA1E700FE6DB9 /* Realm */,
+				1B1C15D9298EA1E700FE6DB9 /* RealmSwift */,
+			);
 			productName = "Happy Birthdays ВОСТАНОВЛЕНИЕ";
-			productReference = 1B1C15AF298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ.app */;
+			productReference = 1B1C15AF298E985F00FE6DB9 /* Happy Birthdays V.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B1C15AA298E985F00FE6DB9 /* Build configuration list for PBXProject "Happy Birthdays ВОСТАНОВЛЕНИЕ" */;
+			buildConfigurationList = 1B1C15AA298E985F00FE6DB9 /* Build configuration list for PBXProject "Happy Birthdays V" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +138,14 @@
 				Base,
 			);
 			mainGroup = 1B1C15A6298E985F00FE6DB9;
+			packageReferences = (
+				1B1C15D6298EA1E700FE6DB9 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1B1C15B0298E985F00FE6DB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B1C15AE298E985F00FE6DB9 /* Happy Birthdays ВОСТАНОВЛЕНИЕ */,
+				1B1C15AE298E985F00FE6DB9 /* Happy Birthdays V */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +169,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B1C15B7298E985F00FE6DB9 /* ViewController.swift in Sources */,
+				1B1C15CD298E9E0400FE6DB9 /* DataManager.swift in Sources */,
+				1B1C15D3298E9E8600FE6DB9 /* HumanModelRealm.swift in Sources */,
+				1B1C15CF298E9E3D00FE6DB9 /* NewContactController.swift in Sources */,
+				1B1C15C7298E9CD600FE6DB9 /* DataHuman.swift in Sources */,
+				1B1C15C9298E9D9200FE6DB9 /* DetailViewController.swift in Sources */,
 				1B1C15B3298E985F00FE6DB9 /* AppDelegate.swift in Sources */,
 				1B1C15B5298E985F00FE6DB9 /* SceneDelegate.swift in Sources */,
+				1B1C15D1298E9E6700FE6DB9 /* OneTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +212,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -204,6 +241,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_FAST_MATH = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -236,6 +274,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				"CLANG_OPTIMIZATION_PROFILE_FILE[arch=*]" = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -263,6 +304,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_FAST_MATH = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -285,11 +327,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5HM4M52B7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Happy Birthdays ВОСТАНОВЛЕНИЕ/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = "Happy Birthdays V/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -313,11 +357,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5HM4M52B7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Happy Birthdays ВОСТАНОВЛЕНИЕ/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = "Happy Birthdays V/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B1C15AA298E985F00FE6DB9 /* Build configuration list for PBXProject "Happy Birthdays ВОСТАНОВЛЕНИЕ" */ = {
+		1B1C15AA298E985F00FE6DB9 /* Build configuration list for PBXProject "Happy Birthdays V" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B1C15C1298E986000FE6DB9 /* Debug */,
@@ -348,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B1C15C3298E986000FE6DB9 /* Build configuration list for PBXNativeTarget "Happy Birthdays ВОСТАНОВЛЕНИЕ" */ = {
+		1B1C15C3298E986000FE6DB9 /* Build configuration list for PBXNativeTarget "Happy Birthdays V" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B1C15C4298E986000FE6DB9 /* Debug */,
@@ -358,6 +404,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B1C15D6298EA1E700FE6DB9 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.33.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B1C15D7298EA1E700FE6DB9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B1C15D6298EA1E700FE6DB9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1B1C15D9298EA1E700FE6DB9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B1C15D6298EA1E700FE6DB9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B1C15A7298E985F00FE6DB9 /* Project object */;
 }

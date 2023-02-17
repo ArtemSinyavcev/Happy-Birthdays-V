@@ -239,7 +239,7 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="hzF-3J-T8G"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="tN6-A1-9ma" id="Q4l-3J-8xk"/>
+                        <outlet property="addButtonAction" destination="tN6-A1-9ma" id="Q4l-3J-8xk"/>
                         <outlet property="dateTextField" destination="KB5-fu-y1B" id="4AB-oW-cHU"/>
                         <outlet property="imageAddImageView" destination="lhC-9h-Xo9" id="fi4-oo-nj4"/>
                         <outlet property="nameTextField" destination="msa-r9-MRA" id="xv4-s9-xUK"/>

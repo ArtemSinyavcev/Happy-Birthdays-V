@@ -12,12 +12,12 @@ class NewContactController: UIViewController, UITextFieldDelegate {
     let dateCalendar = UIDatePicker()
     let imagePicker = UIImagePickerController()
     
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+   // let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageAddImageView: UIImageView!
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addButtonAction: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,7 @@ class NewContactController: UIViewController, UITextFieldDelegate {
         dateCalendar.datePickerMode = .date
         dateCalendar.preferredDatePickerStyle = .wheels
         imageAddImageView.layer.cornerRadius = 20
+        
         // установка языка, который в настройках телефона
         let locateID = Locale.preferredLanguages.first
         dateCalendar.locale = Locale(identifier: locateID!)
@@ -100,7 +101,7 @@ class NewContactController: UIViewController, UITextFieldDelegate {
         navigationController?.popViewController(animated: true)
         
         //imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
+       // imagePicker.sourceType = .photoLibrary
     
     }
     

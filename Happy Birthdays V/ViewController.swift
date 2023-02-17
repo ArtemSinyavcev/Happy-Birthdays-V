@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    //let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     let idTable = "iDTable"
     var poisk = UISearchController()

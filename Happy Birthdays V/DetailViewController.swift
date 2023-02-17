@@ -31,6 +31,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePicker.delegate = self
+        
         detailImageView.image = detailImage
         detailImageView.layer.cornerRadius = 20
         detailDateTextLabel.text = detailDate
@@ -112,7 +114,10 @@ class DetailViewController: UIViewController {
         DataManager.shared.editingHuman(model: detailHumanPrototype!, name: detailNameTextField.text!, date: detailDateTextLabel.text!, foto: photoData, notification: detailReminderTextField.text!)
         let humanModel = HumanModel()
         humanModel.nitificationDate = detailReminderTextField.text
+        
         navigationController?.popViewController(animated: true)
+        
+        imagePicker.sourceType = .photoLibrary
     }
         
     // MARK: - Запрос уведомления с определенным содержанием

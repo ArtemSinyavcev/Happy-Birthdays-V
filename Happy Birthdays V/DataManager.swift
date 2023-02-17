@@ -4,7 +4,7 @@
 //
 //  Created by Артём Синявцев on 23.12.2022.
 //
-
+import Foundation
 import RealmSwift
 
 
@@ -32,6 +32,17 @@ class DataManager{
     func removeHuman(model: HumanModel) {
         try! realm.write {
             realm.delete(model)
+        }
+    }
+    
+    // Редактирование данных в контроллере DetailViewController
+    func editingHuman(model:HumanModel, name: String, date: String, foto: Data?, notification: String) {
+        try! realm.write {
+            model.surnameName = name
+            model.birthdaysDate = date
+            model.humanFoto = foto
+            model.nitificationDate = notification
+            
         }
     }
     

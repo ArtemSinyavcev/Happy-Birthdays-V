@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     let idTable = "iDTable"
     var poisk = UISearchController()
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
   
     @IBAction func addNewContactController(_ sender: UIBarButtonItem) {
-        
         let newContactController = storyboard?.instantiateViewController(withIdentifier: "NewContactController")
         navigationController?.pushViewController(newContactController!, animated: true)
         
@@ -90,21 +89,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     //MARK: -  Сообщает делегату, что строка выбрана
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let green = storyboard.instantiateViewController(withIdentifier: "DetailViewControlller") as? DetailViewController {
+        if let detailView = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             let array = DataManager.shared.getAllHumans()
             let human = array[indexPath.row]
-            green.detailName = human.surnameName
-            green.detailDate = human.birthdaysDate
-            green.detailImage = UIImage(data: human.humanFoto!)
-            show(green, sender: nil)
+            detailView.detailHumanPrototype = human
+            detailView.detailName = human.surnameName
+            detailView.detailDate = human.birthdaysDate
+            detailView.detailImage = UIImage(data: human.humanFoto!)
+            show(detailView, sender: nil)
         }
-        
         
     }
     
     // ВЫСОТА ЯЧЕЙКИ (heightForRowAt)
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 110.0
         
     }
     

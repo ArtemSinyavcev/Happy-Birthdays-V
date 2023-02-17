@@ -23,7 +23,7 @@ class NewContactController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         nameTextField.delegate = self
-       // imagePicker.delegate = self
+        imagePicker.delegate = self
         dateTextField.inputView = dateCalendar
         dateCalendar.datePickerMode = .date
         dateCalendar.preferredDatePickerStyle = .wheels

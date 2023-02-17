@@ -12,6 +12,7 @@ class OneTableCell: UITableViewCell {
     @IBOutlet weak var dateTableLabel: UILabel!
     @IBOutlet weak var nameTableLabel: UILabel!
     @IBOutlet weak var fotoTableImageView: UIImageView!
+    @IBOutlet weak var notificationTableLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

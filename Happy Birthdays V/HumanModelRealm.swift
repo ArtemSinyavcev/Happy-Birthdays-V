@@ -15,7 +15,7 @@ class HumanModel: Object {
     @Persisted var birthdaysDate: String = ""
     @Persisted var surnameName: String = ""
     @Persisted var humanFoto: Data?
-    
+    @Persisted var nitificationDate: String?
     
     convenience init (birthdaysDate: String, surnameName: String, humanFoto: Data? ) {
         
@@ -23,6 +23,7 @@ class HumanModel: Object {
         self.birthdaysDate = birthdaysDate
         self.surnameName = surnameName
         self.humanFoto = humanFoto
+        
     }
     
 }

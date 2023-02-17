@@ -12,17 +12,13 @@ import UserNotifications
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
-    @IBOutlet weak var detailDateViewLabel: UILabel!
-    @IBOutlet weak var detailNameViewLabel: UILabel!
-    @IBOutlet weak var reminderTextField: UITextField!
-    
+    @IBOutlet weak var detailDateTextLabel: UITextField!
+    @IBOutlet weak var detailNameTextField: UITextField!
+    @IBOutlet weak var detailReminderTextField: UITextField!
     
     let notificationCenterr = UNUserNotificationCenter.current()
-    
     var datePicker = UIDatePicker()
-    
     var selectedDate: Date?
-    
     let imagePicker = UIImagePickerController()
     
     var detailImage: UIImage?
@@ -30,20 +26,22 @@ class DetailViewController: UIViewController {
     var detailName: String?
     var detailReminder: String?
     
+    var detailHumanPrototype: HumanModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         detailImageView.image = detailImage
         detailImageView.layer.cornerRadius = 20
-        detailDateViewLabel.text = detailDate
-        detailNameViewLabel.text = detailName
+        detailDateTextLabel.text = detailDate
+        detailNameTextField.text = detailName
         
         schedulNotification()
         
-        reminderTextField.inputView = datePicker
+        detailReminderTextField.inputView = datePicker
         datePicker.preferredDatePickerStyle = .inline
         datePicker.datePickerMode = .dateAndTime
-        datePicker.frame = .init(x: 10, y: 20, width: 30, height: 500)
+        datePicker.frame = .init(x: 0, y: 0, width: 0, height: 500)
         datePicker.backgroundColor = .systemGray6
         datePicker.tintColor = .black
         let locateID = Locale.preferredLanguages.first
@@ -54,7 +52,7 @@ class DetailViewController: UIViewController {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([flexSpace, doneButton], animated: true)
-        reminderTextField.inputAccessoryView = toolBar
+        detailReminderTextField.inputAccessoryView = toolBar
         
         datePicker.addTarget(self, action: #selector(dateChanget), for: .valueChanged)
         
@@ -65,7 +63,7 @@ class DetailViewController: UIViewController {
         
     }
     
-        // Для действия с ФОТО нужно написать функцию tapONImage в @objc
+        // Для ВЫБОРА ДЕЙСТВИЯ с фото нужно написать функцию tapONImage в @objc
     @objc func tapONImage(_ sender: UITapGestureRecognizer) {
         
         let alert = UIAlertController(title: "Изображение", message: nil, preferredStyle: .actionSheet)
@@ -91,25 +89,32 @@ class DetailViewController: UIViewController {
     @objc func doneAction() {
         schedulNotification()
         view.endEditing(true)
-        
     }
     
     // функция отображение данных c datePicker сразу в текстФильд
     @objc func dateChanget() {
         selectedDate = datePicker.date
         getDateFromPicker()
-        
     }
     
     // функция формирования даты в нужном ФОРМАТЕ
     func getDateFromPicker() {
         let formattor = DateFormatter()
-        formattor.dateFormat = "dd. MMM. yyyy       HH:mm"
-        reminderTextField.text = formattor.string(from: datePicker.date)
+        formattor.dateFormat = "dd. MM. yyyy  HH:mm"
+        detailReminderTextField.text = formattor.string(from: datePicker.date)
         
     }
     
-    
+    // MARK: - сохранение редактирования после нажатия на кнопку
+   
+    @IBAction func detailSaveButtonAction(_ sender: UIButton) {
+    let photoData = detailImageView?.image!.jpegData(compressionQuality: 0.5)
+        DataManager.shared.editingHuman(model: detailHumanPrototype!, name: detailNameTextField.text!, date: detailDateTextLabel.text!, foto: photoData, notification: detailReminderTextField.text!)
+        let humanModel = HumanModel()
+        humanModel.nitificationDate = detailReminderTextField.text
+        navigationController?.popViewController(animated: true)
+    }
+        
     // MARK: - Запрос уведомления с определенным содержанием
     func schedulNotification() {
         
